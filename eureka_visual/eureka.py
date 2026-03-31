@@ -33,9 +33,9 @@ def clean_memory():
 
 def run_eureka(
     robot_type: str = "humanoid",
-    n_iterations: int = 3,
-    n_candidates: int = 2,
-    n_train_steps: int = 20_000,
+    n_iterations: int = 5,    # Increased from 3 back to 5 for better evolution!
+    n_candidates: int = 4,    # Increased back up so the LLM tries multiple ideas at once
+    n_train_steps: int = 150_000, # Increased so it tests rules more accurately against gravity
 ):
     cfg = ROBOT_CONFIG[robot_type]
     best_overall = {"mean_reward": -np.inf, "reward_code": None}
@@ -141,9 +141,9 @@ def run_eureka(
 if __name__ == "__main__":
     result = run_eureka(
         robot_type="humanoid",
-        n_iterations=3,
-        n_candidates=2,
-        n_train_steps=100_000
+        n_iterations=5,        # Match the defaults
+        n_candidates=4,
+        n_train_steps=150_000
     )
     print("\nBest reward function:")
     print(result["reward_code"])

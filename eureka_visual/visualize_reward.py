@@ -21,7 +21,7 @@ def main():
     reward_fn = local_ns["compute_reward"]
 
     env_id = "Humanoid-v4"
-    n_train_steps = 1_500_000  # Give it 1.5 million steps to actually learn to walk smoothly! (takes a few mins)
+    n_train_steps = 3_000_000  # Upped heavily! Millions are required for actual smooth bipedal coordination.
     n_envs = 4
 
     print(f"Training an agent on this reward for {n_train_steps} steps...")
@@ -32,8 +32,8 @@ def main():
 
     model = PPO(
         "MlpPolicy", train_envs,
-        n_steps=512, batch_size=64,
-        learning_rate=3e-4, verbose=0
+        n_steps=512, batch_size=64,  
+        learning_rate=3e-4, verbose=1 # <--- Changed verbose to 1 so you can see it working!
     )
     model.learn(total_timesteps=n_train_steps)
     train_envs.close()
