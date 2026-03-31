@@ -141,8 +141,8 @@ def run_eureka(
 if __name__ == "__main__":
     result = run_eureka(
         robot_type="humanoid",
-        n_iterations=5,        # Match the defaults
-        n_candidates=4,
+        n_iterations=4,        # Match the defaults
+        n_candidates=6,
         n_train_steps=150_000
     )
     print("\nBest reward function:")

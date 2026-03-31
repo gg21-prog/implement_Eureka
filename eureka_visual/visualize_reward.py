@@ -38,7 +38,10 @@ def main():
     model.learn(total_timesteps=n_train_steps)
     train_envs.close()
 
-    print("Training complete! Opening MuJoCo graphical window to watch...")
+    print("Training complete! Saving the trained brain to 'humanoid_walker.zip'...")
+    model.save("humanoid_walker")
+
+    print("Opening MuJoCo graphical window to watch...")
     # render_mode="human" opens an actual native 3D window instead of rendering to internal arrays
     eval_env = gym.make(env_id, render_mode="human")
     eval_env = RewardWrapper(eval_env, reward_fn)
