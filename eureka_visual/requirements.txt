@@ -1,0 +1,8 @@
+gymnasium[mujoco]
+stable-baselines3
+transformers
+torch
+pillow
+numpy
+requests
+psutil

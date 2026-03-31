@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Mac OS files
+.DS_Store
+
+# Virtual Environments
+venv/
+env/
+.venv/
+ENV/
+
+# Output and temp files
+best_reward.py
+*.mp4
+*.png
+*.jpg
+.DS_Store
