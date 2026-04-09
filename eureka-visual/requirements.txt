@@ -1,0 +1,19 @@
+# IMPORTANT: On Linux with CUDA, install PyTorch FIRST with the correct index URL:
+#   pip install torch==2.3.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+# Then: pip install -r requirements.txt
+#
+# torch==2.3.1 is listed here for reference / CPU installs.
+# If you already installed torch+cu121 above, pip will skip this line.
+torch==2.3.1
+gymnasium[mujoco]==0.29.1
+stable-baselines3==2.3.2
+transformers==4.44.2
+Pillow==10.4.0
+numpy==1.26.4
+requests==2.32.3
+psutil==6.0.0
+tensorboard==2.17.0
+imageio==2.35.1
+imageio-ffmpeg==0.5.1
+pyyaml==6.0.2
+tqdm==4.66.5

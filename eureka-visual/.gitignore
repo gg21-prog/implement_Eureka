@@ -1,0 +1,12 @@
+outputs/
+__pycache__/
+*.pyc
+*.pyo
+*.zip
+*.mp4
+*.egg-info/
+dist/
+build/
+.env
+*.log
+.DS_Store
